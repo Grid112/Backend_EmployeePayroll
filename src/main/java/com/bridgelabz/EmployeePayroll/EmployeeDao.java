@@ -10,12 +10,12 @@ public class EmployeeDao {
 
 	public EmployeeDao() {
 
-		String jdbcUrl = "jdbc:mysql://localhost:3306/EmployeePayroll";
+		String jdbcUrl = "jdbc:mysql://localhost:3306/employeepayroll";
 		String userName = "root";
 		String password = "Sumit123@Sumit@123";
 
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection(jdbcUrl, userName, password);
 		} catch (SQLException | ClassNotFoundException e) {
 
